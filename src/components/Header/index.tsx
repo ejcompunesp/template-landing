@@ -1,6 +1,7 @@
 const Header = () => (
   <nav className="bg-pink-300 border-black-200 px-40 lg:px-50000 py-2.5 dark:bg-gray-800 backdrop-blur-xl">
     <div className="flex flex-wrap justify-between items-center mb-1.5 max-w-9xl">
+      <a href="letra" className="items-center"></a>
       <a href="#" className="auto items-">
         <img
           src="<https: br.freepik.com/vetores-gratis/modelo-de-logotipo-gradiente-nerd_21077469.html/>"
