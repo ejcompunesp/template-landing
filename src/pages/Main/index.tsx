@@ -1,6 +1,4 @@
-import Avatar from "components/Avatar";
-import Card from "components/Card";
-import Header from "components/Header";
+import { Header, Avatar, Card } from "components";
 
 export const Main = () => {
   return (
