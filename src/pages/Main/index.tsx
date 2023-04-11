@@ -1,4 +1,4 @@
-import { Header, Avatar, Card } from "components";
+import { Header, Avatar, Card, Home } from "components";
 
 export const Main = () => {
   return (
@@ -23,6 +23,8 @@ export const Main = () => {
             </div>
           </div>
         </main>
+          <Home title="EJCOMP Agency" description="
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque porro nobis sunt quia commodi vel ad! Iste pariatur numquam tempora qui porro earum ipsam, odit, quibusdam molestiae minus tenetur quo!"/>
       </div>
     </>
   );
