@@ -1,26 +1,90 @@
-import { Divider } from "@chakra-ui/react";
+import {
+  Grid,
+  GridItem,
+  Divider,
+  Image,
+  Box,
+  Heading,
+  Flex,
+} from "@chakra-ui/react";
+import { useMediaQuery } from "@chakra-ui/react";
 
 type HomeProps = {
   title: string;
   description: string;
 };
 
+const [isSmallerThan1535] = useMediaQuery("(max-width: 1535px)");
+
 const Home = ({ title, description }: HomeProps) => (
-  <div className="grid grid-cols-3 gap-4  w-screen h-screen bg-slate-100">
-    <span>
-      test
-      <img />
-    </span>
-    <span>
-      <div>{title}</div>
-      <div>{description}</div>
-      <Divider />
-      <div></div>
-    </span>
-    <span>
-      test
-      <img />
-    </span>
-  </div>
+  <Grid
+    h="100vh"
+    templateRows="repeat(2, 1fr)"
+    templateColumns="repeat(12, 1fr)"
+    gap={1}
+  >
+    <GridItem rowSpan={2} colSpan={1} bg="brand.700">
+      <Box position="relative" top="50%">
+        <Image
+          h={80}
+          w="100%"
+          borderRadius={5}
+          src="https://e0.pxfuel.com/wallpapers/33/172/desktop-wallpaper-map-curves-dark-pattern-background-bw-black-and-white-liquid-art.jpg"
+        />
+      </Box>
+    </GridItem>
+
+    <GridItem rowSpan={2} colSpan={8} bg="brand.700">
+      <Flex
+        alignItems="center"
+        flexDirection="column"
+        position="relative"
+        top="20%"
+      >
+        <Heading
+          as="h1"
+          fontSize={isSmallerThan1535 ? "7xl" : "9xl"}
+          noOfLines={1}
+          w="100%"
+          fontFamily="Hanuman, serif"
+          fontWeight="300"
+        >
+          {title}
+        </Heading>
+
+        <Heading
+          as="p"
+          fontSize="3.7rem"
+          noOfLines={0}
+          mt="10"
+          maxW="80%"
+          textAlign="start"
+          fontFamily="Fira sans, sans-serif"
+          fontWeight="100"
+        >
+          {description}
+        </Heading>
+
+        <Divider
+          borderColor="RGBA(0, 0, 0, 0.16)"
+          maxW="80%"
+          my="10"
+          borderWidth="1px"
+          borderRadius="lg"
+        />
+      </Flex>
+    </GridItem>
+
+    <GridItem rowSpan={2} colSpan={3} bg="brand.700">
+      <Box position="relative" top="50%">
+        <Image
+          h={80}
+          w="100%"
+          borderRadius={5}
+          src="https://e0.pxfuel.com/wallpapers/33/172/desktop-wallpaper-map-curves-dark-pattern-background-bw-black-and-white-liquid-art.jpg"
+        />
+      </Box>
+    </GridItem>
+  </Grid>
 );
 export default Home;

@@ -2067,6 +2067,36 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.35.0.tgz"
   integrity sha512-JXdzbRiWclLVoD8sNUjR443VVlYqiYmDVT6rGUEIEHU5YJW0gaVZwV2xgM7D4arkvASqD0IlLUVjHiFuxaftRw==
 
+"@fontsource/aleo@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/aleo/-/aleo-4.5.9.tgz#7b83c8933e4c4340ad6f3aec2967d016521c807e"
+  integrity sha512-Z83wrPNaAypF8MAnJRYW1qBgbbz0UYUW9tRoTaAq1yUt9coGXM+q7DimZfTRNa770caVCX9jb0q8jEGrnJ84DQ==
+
+"@fontsource/alex-brush@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/alex-brush/-/alex-brush-4.5.10.tgz#d914c37587cde244d081bbd5d4591b86e2d7b09c"
+  integrity sha512-XlW3jglLsLZehcMe2EE7dLvFU1aza3TWYEsIhFmaoG7Qw9Yo12hKT1kUGuqkkCmJ2jmWQJsB7Eodby4HicSyKQ==
+
+"@fontsource/fira-sans@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/fira-sans/-/fira-sans-4.5.10.tgz#63a6dacfa482017a840b40e9c2cfefb187a0e515"
+  integrity sha512-4Edj+GA0LYSqfXOvdTwVGmCShT8Ycd8bKzdfzM302n+I6Hsg6h3gBkBeNgN19PhkcngDznZyHv3EkyrKqvMTGw==
+
+"@fontsource/hanuman@^4.5.11":
+  version "4.5.11"
+  resolved "https://registry.yarnpkg.com/@fontsource/hanuman/-/hanuman-4.5.11.tgz#c619077f7cb3c83d6e937909feea90c6ac9225b1"
+  integrity sha512-+bSPbpUyf/OGuQVRELWwY3XM2HynQKgcTUozqUcW2Gmv/PQpz3nNZ7BUcgDo74eSPed+rciE2me2y9JalNMq8g==
+
+"@fontsource/open-sans@^4.5.14":
+  version "4.5.14"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.14.tgz#b3e1665c0b3fdfc1f030ded2843749e3cf3a5900"
+  integrity sha512-mBXIIETBlW8q/ocuUN0hyGow2iuf75hQEHQt8R/RJ/HcphVbLg8KB7pHYGbFGDqs75W+SWvTC7JkVeAjT65BuQ==
+
+"@fontsource/oxygen@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/oxygen/-/oxygen-4.5.9.tgz#6113fc8415b4d4a8af1df82f26e82f6150bf0923"
+  integrity sha512-W/Aoi61hVquFiPGi4Bp8h4KExbDUqbyEhwOhEQN5CcKdHAHwrk1aev0nwIAAu4Cv8ROHSZ1E1N6gpNnlo5vGmA==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.8.tgz"

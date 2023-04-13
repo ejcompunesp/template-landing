@@ -23,8 +23,8 @@ export const Main = () => {
             </div>
           </div>
         </main>
-          <Home title="EJCOMP Agency" description="
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque porro nobis sunt quia commodi vel ad! Iste pariatur numquam tempora qui porro earum ipsam, odit, quibusdam molestiae minus tenetur quo!"/>
+          <Home title="EJComp Agency" description="
+        Turning and bringing idea into amazing product through next level visual display."/>
       </div>
     </>
   );
