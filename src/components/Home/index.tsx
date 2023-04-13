@@ -6,15 +6,13 @@ import {
   Box,
   Heading,
   Flex,
+  useMediaQuery
 } from "@chakra-ui/react";
-import { useMediaQuery } from "@chakra-ui/react";
 
 type HomeProps = {
   title: string;
   description: string;
 };
-
-const [isSmallerThan1535] = useMediaQuery("(max-width: 1535px)");
 
 const Home = ({ title, description }: HomeProps) => (
   <Grid
@@ -43,21 +41,21 @@ const Home = ({ title, description }: HomeProps) => (
       >
         <Heading
           as="h1"
-          fontSize={isSmallerThan1535 ? "7xl" : "9xl"}
+          fontSize="9xl"
           noOfLines={1}
           w="100%"
           fontFamily="Hanuman, serif"
           fontWeight="300"
         >
-          {title}
+          {title},
         </Heading>
 
         <Heading
           as="p"
-          fontSize="3.7rem"
+          fontSize="4rem"
           noOfLines={0}
-          mt="10"
-          maxW="80%"
+          mt="16"
+          maxW="82%"
           textAlign="start"
           fontFamily="Fira sans, sans-serif"
           fontWeight="100"
@@ -67,8 +65,8 @@ const Home = ({ title, description }: HomeProps) => (
 
         <Divider
           borderColor="RGBA(0, 0, 0, 0.16)"
-          maxW="80%"
-          my="10"
+          maxW="85%"
+          my="16"
           borderWidth="1px"
           borderRadius="lg"
         />
