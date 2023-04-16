@@ -1,3 +1,4 @@
+import { ArrowForwardIcon, ChatIcon, PhoneIcon } from "@chakra-ui/icons";
 import {
   Grid,
   GridItem,
@@ -6,8 +7,15 @@ import {
   Box,
   Heading,
   Flex,
-  useMediaQuery
+  useMediaQuery,
+  Stack,
+  Button
 } from "@chakra-ui/react";
+
+
+
+
+
 
 type HomeProps = {
   title: string;
@@ -21,6 +29,7 @@ const Home = ({ title, description }: HomeProps) => (
     templateColumns="repeat(12, 1fr)"
     gap={1}
   >
+    
     <GridItem rowSpan={2} colSpan={1} bg="brand.700">
       <Box position="relative" top="50%">
         <Image
@@ -32,22 +41,48 @@ const Home = ({ title, description }: HomeProps) => (
       </Box>
     </GridItem>
 
+   
+
     <GridItem rowSpan={2} colSpan={8} bg="brand.700">
       <Flex
         alignItems="center"
         flexDirection="column"
         position="relative"
-        top="20%"
+        top="10%"
       >
+<Stack bgPosition="inline"
+        top="5%"
+        flexDirection='-moz-initial'
+        display='inline' 
+        align='justifyItems' 
+        fontFamily="Hanuman, serif"
+        >
+        <Button colorScheme='gray' variant='ghost'>
+    Our works
+          </Button>
+      <Button colorScheme='gray' variant='ghost'>
+    Services
+         </Button>
+    <Button colorScheme='gray' variant='ghost'>
+    Product
+          </Button>
+          <Button size='lg' colorScheme='purple' mt='24px'>
+    Get in touch 
+    <ArrowForwardIcon display='inline'  w={5} h={10} color="white"  />
+  </Button>
+          
+         </Stack>
+
         <Heading
           as="h1"
           fontSize="9xl"
           noOfLines={1}
-          w="100%"
+          w="90%"
           fontFamily="Hanuman, serif"
-          fontWeight="300"
+          fontWeight="200"
         >
           {title},
+          
         </Heading>
 
         <Heading
@@ -71,6 +106,11 @@ const Home = ({ title, description }: HomeProps) => (
           borderRadius="lg"
         />
       </Flex>
+      <GridItem >
+    <ChatIcon display='inline'  w={5} h={10} color="red.500" margin='-0.5%' />  
+    <text> contact us</text>
+    <PhoneIcon display='inline'  w={5} h={10} color="red.500" padding='-20' />
+      </GridItem>
     </GridItem>
 
     <GridItem rowSpan={2} colSpan={3} bg="brand.700">
@@ -82,7 +122,13 @@ const Home = ({ title, description }: HomeProps) => (
           src="https://e0.pxfuel.com/wallpapers/33/172/desktop-wallpaper-map-curves-dark-pattern-background-bw-black-and-white-liquid-art.jpg"
         />
       </Box>
-    </GridItem>
+    </GridItem>      
   </Grid>
 );
 export default Home;
+
+
+
+
+
+
