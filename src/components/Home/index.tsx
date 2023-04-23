@@ -22,7 +22,6 @@ const Home = ({ title, description }: HomeProps) => (
     templateColumns="repeat(12, 1fr)"
     gap={1}
   >
-
     <GridItem rowSpan={2} colSpan={1} bg="brand.700">
       <Box position="relative" top="50%">
         <Image
@@ -33,7 +32,6 @@ const Home = ({ title, description }: HomeProps) => (
         />
       </Box>
     </GridItem>
-
     <GridItem rowSpan={2} colSpan={8} bg="brand.700">
       <Flex
         alignItems="center"
@@ -51,7 +49,6 @@ const Home = ({ title, description }: HomeProps) => (
         >
           {title},
         </Heading>
-
         <Heading
           as="p"
           fontSize="4rem"
@@ -74,7 +71,6 @@ const Home = ({ title, description }: HomeProps) => (
         />
       </Flex>
     </GridItem>
-
     <GridItem rowSpan={2} colSpan={3} bg="brand.700">
       <Box position="relative" top="50%">
         <Image
