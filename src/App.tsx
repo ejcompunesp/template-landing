@@ -1,11 +1,11 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import {createBrowserRouter, RouterProvider,} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "@fontsource/open-sans";
 import "@fontsource/oxygen";
 import "@fontsource/fira-sans";
-import "@fontsource/hanuman"
+import "@fontsource/hanuman";
 
-import Root from "./routes/root"
+import Root from "./routes/root";
 
 const router = createBrowserRouter([
   {
@@ -15,17 +15,17 @@ const router = createBrowserRouter([
 ]);
 
 // extend theme
-const fonts ={
+const fonts = {
   body: "Tahoma, Open Sans, Fira Sans, hanuman",
-  heading: 'sans-serif, Courier New, monospace, serif',
-}
+  heading: "sans-serif, Courier New, monospace, serif",
+};
 
-const theme = extendTheme({fonts});
+const theme = extendTheme({ fonts });
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </ChakraProvider>
   );
 }
