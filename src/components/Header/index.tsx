@@ -1,56 +1,151 @@
-const Header = () => (
-  <nav className="bg-pink-300 border-black-200 px-40 lg:px-50000 py-2.5 dark:bg-gray-800 backdrop-blur-xl">
-    <div className="flex flex-wrap justify-between items-center mb-1.5 max-w-9xl">
-      <a href="letra" className="items-center"></a>
-      <a href="#" className="auto items-">
-        <img
-          src="<https: br.freepik.com/vetores-gratis/modelo-de-logotipo-gradiente-nerd_21077469.html/>"
-          className="mr-3 h-6 sm:h-6"
-          alt=" Logo"
-        />
-      </a>
-      <div
-        className="inline justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
-        id="mobile-menu-2"
-      >
-        <ul className="flex flex-col mt-8 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-          <li>
-            <a
-              href="#"
-              className=" first-line: backdrop-blur-xl justify-center items-center py-2 pr-4 pl-3 text-white rounded bg-red-700 lg:bg-transparent lg:text-white lg:p-0 dark:text-white"
-              aria-current="page"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="content-center py-4 pr-4 pl-7 text-black border-b border-gray-100 hover:bg-black-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              Our works
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="content-center py-2 pr-4 pl-3 text-black border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              Service
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="content-center py-2 pr-4 pl-3 text-black border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              Product
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-);
+import { useEffect, useState } from "react";
+import {
+  Box,
+  Image,
+  Button,
+  Icon,
+  Fade,
+  useDisclosure,
+  Link,
+  HStack,
+  VStack,
+  LinkOverlay,
+  LinkBox,
+} from "@chakra-ui/react";
+
+// import Logo from "../../assets/images/logo-off-2.png";
+
+const boxStyle = {
+  w: "100%",
+  p: "0.6rem 3rem 0.6rem 1.5rem",
+  pr: {base:"1.5rem", sm:"3rem"},
+  color: "white",
+  display: "flex",
+  alignItems: "center",
+  pos: "fixed",
+  transition: "all 0.5s",
+  "::after": {
+    opacity: 0,
+  },
+};
+
+const LinkStyle = {
+  w: "fit-content",
+  fontWeight: "bold",
+  transition: "all 0.2s",
+  ":hover": {
+    outline: "2px solid yellow",
+    textDecoration: "none",
+  },
+};
+
+const MenuLinkStyle = {
+  ":hover": {
+    outline: "none",
+    textDecoration: "none",
+  },
+};
+
+const MenuStyle = {
+  w: "100vw",
+  h: "100vh",
+  pos: "absolute",
+  top: "0",
+  left: "0",
+  pt: "7rem",
+  pl: "2rem",
+  fontSize: "3xl",
+  bg: "#000000",
+};
+
+const HamburgerIcon = () => {
+  return (
+    <Icon boxSize={6} viewBox="0 0 24 24" fill="white">
+      <path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z" />
+    </Icon>
+  );
+};
+const CloseIcon = () => {
+  return (
+    <Icon boxSize={6} viewBox="0 0 24 24" fill="white">
+      <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z" />
+    </Icon>
+  );
+};
+
+const Header = () => {
+  
+  const { onToggle, isOpen, getDisclosureProps } = useDisclosure();
+  const disclosureProps = getDisclosureProps();
+  
+  const [ imgHeight, setImgHeight ] = useState("5rem");
+  const [ headerOpacity, setHeaderOpacity ] = useState("#0000");
+  
+  useEffect(() => {
+    window.addEventListener("scroll", updateHeader);
+  }, [ imgHeight, headerOpacity ]);
+
+  const updateHeader = () => {
+    if (window.scrollY > 0) {
+      setHeaderOpacity("#000f");
+      setImgHeight("2.5rem");
+    } else if (window.scrollY <= 0) {
+      setHeaderOpacity("#0000");
+      setImgHeight("5rem");
+    }
+  };
+
+  const toggleScroll = () => {
+    console.log("Oi")
+    let doc = document.body.style.overflow = isOpen ? "visible" : "hidden";
+    onToggle()
+  }
+
+  return (
+    <Box sx={ boxStyle } bg={ headerOpacity } zIndex={1}>
+      <LinkBox zIndex={1}>
+        <LinkOverlay href="">
+          <Image
+            src="<https: br.freepik.com/vetores-gratis/modelo-de-logotipo-gradiente-nerd_21077469.html/>"
+            height={{ base: "2.5rem", md: imgHeight }}
+            transition="all 0.5s"
+          />
+        </LinkOverlay>
+      </LinkBox>
+      <HStack marginLeft="auto" hideBelow="sm" spacing="2rem">
+        <Link sx={ LinkStyle } href="">
+          OFFstory
+        </Link>
+        <Link sx={ LinkStyle } href="">
+          Line-up
+        </Link>
+        <Link sx={ LinkStyle } href="">
+          FAQ
+        </Link>
+      </HStack>
+      <Box ml="auto" hideFrom="sm" gap="0.2rem">
+        <Button
+          rightIcon={ isOpen ? <CloseIcon /> : <HamburgerIcon /> }
+          variant="unstyled"
+          display="inline-flex"
+          px="0"
+          zIndex={1}
+          onClick={toggleScroll}
+        > 
+          Menu
+        </Button>
+      </Box>
+      <Fade in={ isOpen } unmountOnExit={ true }>
+        <Box sx={ MenuStyle } { ...disclosureProps }>
+          <VStack alignItems="left" spacing={0}>
+            <Link sx={{ ...LinkStyle, ...MenuLinkStyle }} href="">OFFstory</Link>
+            <Link sx={{ ...LinkStyle, ...MenuLinkStyle }} href="">Line-up</Link>
+            <Link sx={{ ...LinkStyle, ...MenuLinkStyle }} href="">FAQ</Link>
+          </VStack>
+        </Box>
+      </Fade>
+    </Box>
+  );
+};
 
 export default Header;
