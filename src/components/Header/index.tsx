@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 
 // import Logo from "../../assets/images/logo-off-2.png";
-
+import Logo from "../../assets/images/ejcomp.png";
 const boxStyle = {
   w: "100%",
   p: "0.6rem 3rem 0.6rem 1.5rem",
@@ -106,7 +106,7 @@ const Header = () => {
       <LinkBox zIndex={1}>
         <LinkOverlay href="">
           <Image
-            src="<https: br.freepik.com/vetores-gratis/modelo-de-logotipo-gradiente-nerd_21077469.html/>"
+            src={ Logo }
             height={{ base: "2.5rem", md: imgHeight }}
             transition="all 0.5s"
           />
