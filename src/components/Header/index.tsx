@@ -13,13 +13,12 @@ import {
   LinkBox,
 } from "@chakra-ui/react";
 
-// import Logo from "../../assets/images/logo-off-2.png";
 import Logo from "../../assets/images/ejcomp.png";
 const boxStyle = {
   w: "100%",
   p: "0.6rem 3rem 0.6rem 1.5rem",
   pr: {base:"1.5rem", sm:"3rem"},
-  color: "white",
+  color: "black",
   display: "flex",
   alignItems: "center",
   pos: "fixed",
@@ -34,7 +33,6 @@ const LinkStyle = {
   fontWeight: "bold",
   transition: "all 0.2s",
   ":hover": {
-    outline: "2px solid yellow",
     textDecoration: "none",
   },
 };
@@ -60,14 +58,14 @@ const MenuStyle = {
 
 const HamburgerIcon = () => {
   return (
-    <Icon boxSize={6} viewBox="0 0 24 24" fill="white">
+    <Icon boxSize={6} viewBox="0 0 24 24" fill="black">
       <path d="M4 11h12v2H4zm0-5h16v2H4zm0 12h7.235v-2H4z" />
     </Icon>
   );
 };
 const CloseIcon = () => {
   return (
-    <Icon boxSize={6} viewBox="0 0 24 24" fill="white">
+    <Icon boxSize={6} viewBox="0 0 24 24" fill="black">
       <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z" />
     </Icon>
   );
@@ -80,18 +78,21 @@ const Header = () => {
   
   const [ imgHeight, setImgHeight ] = useState("5rem");
   const [ headerOpacity, setHeaderOpacity ] = useState("#0000");
+  const [ fontColor, setFontColor ] = useState("#0000");
   
   useEffect(() => {
     window.addEventListener("scroll", updateHeader);
-  }, [ imgHeight, headerOpacity ]);
+  }, [ imgHeight, headerOpacity, fontColor ]);
 
   const updateHeader = () => {
     if (window.scrollY > 0) {
       setHeaderOpacity("#000f");
       setImgHeight("2.5rem");
+      setFontColor("#ffff");
     } else if (window.scrollY <= 0) {
-      setHeaderOpacity("#0000");
+      setHeaderOpacity("#ffff");
       setImgHeight("5rem");
+      setFontColor("#0000");
     }
   };
 
@@ -102,7 +103,7 @@ const Header = () => {
   }
 
   return (
-    <Box sx={ boxStyle } bg={ headerOpacity } zIndex={1}>
+    <Box sx={ boxStyle } bg={ headerOpacity } zIndex={1} color={fontColor}>
       <LinkBox zIndex={1}>
         <LinkOverlay href="">
           <Image
