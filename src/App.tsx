@@ -25,7 +25,7 @@ const theme = extendTheme({ fonts });
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <RouterProvider router={router} />
+      <Root />
     </ChakraProvider>
   );
 }
