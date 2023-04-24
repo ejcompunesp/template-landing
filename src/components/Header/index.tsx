@@ -1,3 +1,4 @@
+import Logo from "../../assets/images/ejcomp1.png";
 import { useEffect, useState } from "react";
 import {
   Box,
@@ -13,12 +14,12 @@ import {
   LinkBox,
 } from "@chakra-ui/react";
 
-import Logo from "../../assets/images/ejcomp.png";
+
 const boxStyle = {
   w: "100%",
   p: "0.6rem 3rem 0.6rem 1.5rem",
   pr: {base:"1.5rem", sm:"3rem"},
-  color: "black",
+  //color: "black",
   display: "flex",
   alignItems: "center",
   pos: "fixed",
@@ -90,9 +91,9 @@ const Header = () => {
       setImgHeight("2.5rem");
       setFontColor("#ffff");
     } else if (window.scrollY <= 0) {
+      setFontColor("#0000");
       setHeaderOpacity("#ffff");
       setImgHeight("5rem");
-      setFontColor("#0000");
     }
   };
 
@@ -114,7 +115,7 @@ const Header = () => {
         </LinkOverlay>
       </LinkBox>
       <HStack marginLeft="auto" hideBelow="sm" spacing="2rem">
-        <Link sx={ LinkStyle } href="">
+        {/* <Link sx={ LinkStyle } href="">
           OFFstory
         </Link>
         <Link sx={ LinkStyle } href="">
@@ -122,7 +123,7 @@ const Header = () => {
         </Link>
         <Link sx={ LinkStyle } href="">
           FAQ
-        </Link>
+        </Link> */}
       </HStack>
       <Box ml="auto" hideFrom="sm" gap="0.2rem">
         <Button

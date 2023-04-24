@@ -8,7 +8,7 @@ import {
   Flex,
   useMediaQuery,
 } from "@chakra-ui/react";
-import Header from "components/Header";
+import SvgLabel from "components/SvgLabel";
 
 type HomeProps = {
   title: string;
@@ -69,6 +69,8 @@ const Home = ({ title, description }: HomeProps) => (
           borderWidth="1px"
           borderRadius="lg"
         />
+
+        <SvgLabel variant="FIinstagram" label="Instagram"></SvgLabel>
       </Flex>
     </GridItem>
     <GridItem rowSpan={2} colSpan={3} bg="brand.700">
