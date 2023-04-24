@@ -7,6 +7,7 @@ import {
   Text,
   Divider,
 } from "@chakra-ui/react";
+import { FiChevronDown, FiMousePointer } from "react-icons/fi";
 
 const About = () => {
   return (
@@ -44,15 +45,18 @@ const About = () => {
             </Text>
           </Box>
 
-          <Flex>
+          <Flex alignItems="center" mt="16">
             <Divider
+            h="8rem"
               orientation="vertical"
               borderColor="#613fe5"
-              my="16"
               borderWidth="1px"
               borderRadius="lg"
             />
-            
+            <Box ml="4">
+              <FiMousePointer color="white" />
+                <Text color="white" fontSize="lg" as="b"> Scroll Down</Text>
+            </Box>
           </Flex>
         </Flex>
 
