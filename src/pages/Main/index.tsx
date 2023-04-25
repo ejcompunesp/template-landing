@@ -1,9 +1,10 @@
 import { Box } from "@chakra-ui/react";
-import { Home, Projects, Services, About } from "components";
+import { Home, Projects, Services, Header, About } from "components";
 
 export const Main = () => {
   return (
     <>
+      <Header />
       <Home
         title="EJComp Agency"
         description="
