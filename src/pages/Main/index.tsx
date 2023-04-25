@@ -12,9 +12,7 @@ export const Main = () => {
       />
       <About />
       <Projects />
-      <Box my="8" mx="40">
-        <Services />
-      </Box>
+      <Services />
     </>
   );
 };

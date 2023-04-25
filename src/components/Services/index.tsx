@@ -91,41 +91,39 @@ const ExtendedPost = () => {
 
 const Services = () => {
   return (
-    <>
-      <Stack
-        direction={{ base: "column", md: "row" }}
-        gap={{ base: "20", md: "60" }}
-        py="12"
-        bg="white"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Flex direction="column">
-          <Flex>
-            <Text color="gray.600" fontSize="lg">
-              04
-            </Text>
-            <Text mx="2" color="gray.600" fontSize="lg">
-              /
-            </Text>
-            <Text fontSize="lg" as="b">
-              SERVICES
-            </Text>
-          </Flex>
-          <Text fontSize={{ base: "2xl", md: "6xl" }} as="b">
-            "Providing Visual Services."
+    <Stack
+      direction="column"
+      gap={{ base: "0", md: "40" }}
+      py="12"
+      px={{ base: "5", md: "60" }}
+      bg="white"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Flex direction="column">
+        <Flex>
+          <Text color="gray.600" fontSize="lg">
+            04
+          </Text>
+          <Text mx="2" color="gray.600" fontSize="lg">
+            /
+          </Text>
+          <Text fontSize="lg" as="b">
+            SERVICES
           </Text>
         </Flex>
-        <Text fontSize={{ base: "lg", md: "4xl" }}>
+        <Text py="8" fontSize={{ base: "2xl", md: "6xl" }} as="b">
+          "Providing Visual Services."
+        </Text>
+        <Text my="6" fontSize={{ base: "lg", md: "4xl" }}>
           "We focused on turning idea into useful and amazing products. Love to
           see our service is match to clients."
         </Text>
-      </Stack>
+      </Flex>
       <Flex
         direction={{ base: "column", md: "row" }}
         justifyContent="center"
         alignItems="center"
-        mt="12"
       >
         <Post title="01." description="Graphic Desing." />
         <ExtendedPost />
@@ -133,7 +131,7 @@ const Services = () => {
           <Post {...post} />
         ))}
       </Flex>
-    </>
+    </Stack>
   );
 };
 

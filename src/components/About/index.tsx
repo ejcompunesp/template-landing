@@ -1,12 +1,4 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  Image,
-  Stack,
-  Text,
-  Divider,
-} from "@chakra-ui/react";
+import { Box, Flex, Image, Stack, Text, Divider } from "@chakra-ui/react";
 
 const About = () => {
   return (
@@ -14,20 +6,24 @@ const About = () => {
       gap="20"
       direction="column"
       pb="12"
-      px="48"
+      px={{ base: "25", md: "48" }}
       bg="black"
       justifyContent="center"
       alignItems="center"
-      w="100%"
     >
       <Flex
         direction={{ base: "column", md: "row" }}
-        gap="0"
         h="100%"
+        gap={10}
         justifyContent="center"
         alignItems="center"
       >
-        <Flex direction="column" mt="40" h="100%" w="40%" lineHeight="5rem">
+        <Flex
+          direction="column"
+          mt={{ base: "20", md: "40" }}
+          h="100%"
+          lineHeight="2rem"
+        >
           <Flex>
             <Text color="gray.600" fontSize={{ base: "md", md: "lg" }}>
               02
@@ -39,11 +35,15 @@ const About = () => {
               ABOUT
             </Text>
           </Flex>
-          <Box>
-            <Text color="gray.600" fontSize={{ base: "2xl", md: "7xl" }}>
+          <Box my="10">
+            <Text color="gray.600" fontSize={{ base: "2xl", md: "6xl" }}>
               We are
             </Text>
-            <Text color="white" fontSize={{ base: "2xl", md: "7xl" }}>
+            <Text
+              color="white"
+              fontSize={{ base: "2xl", md: "6xl" }}
+              my={{ md: "12" }}
+            >
               Creatives.
             </Text>
           </Box>
@@ -57,7 +57,7 @@ const About = () => {
             />
           </Flex>
         </Flex>
-        <Flex direction="column" h="100%" w="52%">
+        <Flex direction="column" h="100%">
           <Image
             borderRadius="lg"
             fit="cover"
@@ -71,7 +71,7 @@ const About = () => {
             ideas into useful and beautiful products. We're based in{" "}
             <b style={{ color: "whitesmoke" }}>Canada and Germany</b>.
           </Text>
-          <Text color="gray.600" fontSize={{ base: "md", md: "2xl" }} mt="10">
+          <Text color="gray.600" fontSize={{ base: "md", md: "2xl" }}>
             Visual art is our field of expertise. We help people create good
             engagement through{" "}
             <b style={{ color: "whitesmoke" }}>design and process</b>. We
