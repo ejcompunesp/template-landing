@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { Home, Projects, Services, Header } from "components";
+import { Home, Projects, Services, Header, About } from "components";
 
 export const Main = () => {
   return (
@@ -10,6 +10,7 @@ export const Main = () => {
         description="
         Turning and bringing idea into amazing product through next level visual display."
       />
+      <About />
       <Projects />
       <Box my="8" mx="40">
         <Services />
