@@ -6,14 +6,12 @@ import {
   Box,
   Heading,
   Flex,
-  useMediaQuery,
 } from "@chakra-ui/react";
-import SvgLabel from "components/SvgLabel";
 
-type HomeProps = {
+interface HomeProps {
   title: string;
   description: string;
-};
+}
 
 const Home = ({ title, description }: HomeProps) => (
   <Grid
@@ -33,25 +31,21 @@ const Home = ({ title, description }: HomeProps) => (
       </Box>
     </GridItem>
     <GridItem rowSpan={2} colSpan={8} bg="brand.700">
-      <Flex
-        alignItems="center"
-        flexDirection="column"
-        position="relative"
-        top="10%"
-      >
+      <Flex alignItems="center" flexDirection="column" position="relative">
         <Heading
+          mt="24"
           as="h1"
-          fontSize="9xl"
+          fontSize={{ base: "2xl", md: "9xl" }}
           noOfLines={1}
           w="90%"
           fontFamily="Hanuman, serif"
           fontWeight="200"
         >
-          {title},
+          {title}
         </Heading>
         <Heading
           as="p"
-          fontSize="4rem"
+          fontSize={{ base: "2xl", md: "6xl" }}
           noOfLines={0}
           mt="16"
           maxW="82%"
@@ -61,16 +55,13 @@ const Home = ({ title, description }: HomeProps) => (
         >
           {description}
         </Heading>
-
         <Divider
-          borderColor="RGBA(0, 0, 0, 0.16)"
+          borderColor="black"
           maxW="85%"
           my="16"
           borderWidth="1px"
           borderRadius="lg"
         />
-
-        <SvgLabel variant="FIinstagram" label="Instagram"></SvgLabel>
       </Flex>
     </GridItem>
     <GridItem rowSpan={2} colSpan={3} bg="brand.700">

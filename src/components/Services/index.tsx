@@ -4,6 +4,7 @@ import {
   Divider,
   Flex,
   HStack,
+  Stack,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -75,7 +76,11 @@ const ExtendedPost = () => {
           </Text>
         </Box>
       </Flex>
-      <Flex w="100%" justifyContent="flex-end">
+      <Flex
+        w="100%"
+        justifyContent="flex-end"
+        display={{ base: "none", md: "flex" }}
+      >
         <Button size="lg" bg="purple.700" color="white" borderRadius="0">
           Discover Now
         </Button>
@@ -87,10 +92,10 @@ const ExtendedPost = () => {
 const Services = () => {
   return (
     <>
-      <HStack
-        gap="60"
+      <Stack
+        direction={{ base: "column", md: "row" }}
+        gap={{ base: "20", md: "60" }}
         py="12"
-        px="48"
         bg="white"
         justifyContent="center"
         alignItems="center"
@@ -107,22 +112,27 @@ const Services = () => {
               SERVICES
             </Text>
           </Flex>
-          <Text fontSize="6xl" as="b">
+          <Text fontSize={{ base: "2xl", md: "6xl" }} as="b">
             "Providing Visual Services."
           </Text>
         </Flex>
-        <Text fontSize="2xl">
+        <Text fontSize={{ base: "lg", md: "4xl" }}>
           "We focused on turning idea into useful and amazing products. Love to
           see our service is match to clients."
         </Text>
-      </HStack>
-      <HStack justifyContent="center" alignItems="center">
+      </Stack>
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        justifyContent="center"
+        alignItems="center"
+        mt="12"
+      >
         <Post title="01." description="Graphic Desing." />
         <ExtendedPost />
         {posts.map((post) => (
           <Post {...post} />
         ))}
-      </HStack>
+      </Flex>
     </>
   );
 };

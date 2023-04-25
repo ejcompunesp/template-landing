@@ -5,11 +5,10 @@ import Slider from "react-slick";
 const settings = {
   dots: true,
   arrows: false,
-  fade: true,
   infinite: true,
   autoplay: true,
-  speed: 900,
-  autoplaySpeed: 5000,
+  speed: 500,
+  autoplaySpeed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -24,13 +23,7 @@ const Carousel = () => {
   ];
 
   return (
-    <Box
-      borderRadius="lg"
-      position="relative"
-      height="600px"
-      width="full"
-      overflow="hidden"
-    >
+    <Box position="relative" height="600px" width="full" overflow="hidden">
       <link
         rel="stylesheet"
         type="text/css"
