@@ -7,6 +7,7 @@ const Projects = () => {
       gap="20"
       direction="column"
       py="12"
+      h="100%"
       px={{ base: "25", md: "60" }}
       bg="black"
       justifyContent="center"
@@ -49,7 +50,7 @@ const Projects = () => {
           </Flex>
         </Flex>
       </Flex>
-      {/* <Carousel /> */}
+      <Carousel />
     </Stack>
   );
 };
